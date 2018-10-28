@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/balloon-css/0.5.0/balloon.min.css">
   <link rel="stylesheet" href="style2.css">
   <meta name="theme-color" content="#1c1c1c"/>
 </head>
@@ -78,7 +79,7 @@
           науковий ступінь кандидата технічних наук; 2 – звання професора, 8 – звання
           доцента.
         </div>
-        <button class="summary-card__button">Читати далі</button>
+        <button class="summary-card__button" data-balloon="Більше інформації" data-balloon-pos="up">Читати далі</button>
      </div>
 
       </div>
@@ -86,21 +87,21 @@
       <div class="info-card-holder">
         <div class="info-card">
           <img src="./images/info1.png" alt="info 1" class="pure-img info-card__image">
-          <button class="info-card__button">Я абітурієнт</button>
+          <button class="info-card__button" data-balloon="Детальніша інформація для абітурієнта" data-balloon-pos="up">Я абітурієнт</button>
         </div>
         <div class="info-card">
           <img src="./images/info2.png" alt="info 1" class="pure-img info-card__image">
-          <button class="info-card__button">Я студент</button>
+          <button class="info-card__button" data-balloon="Детальніша інформація для студента" data-balloon-pos="up">Я студент</button>
         </div>
       </div>
       <div class="info-card-holder">
         <div class="info-card">
           <img src="./images/info3.png" alt="info 1" class="pure-img info-card__image">
-          <button class="info-card__button">Освіта</button>
+          <button class="info-card__button" data-balloon="Детальніша інформація про освіту" data-balloon-pos="up">Освіта</button>
         </div>
         <div class="info-card">
           <img src="./images/info4.png" alt="info 1" class="pure-img info-card__image">
-          <button class="info-card__button">Наука</button>
+          <button class="info-card__button" data-balloon="Детальніша інформація про науку" data-balloon-pos="up">Наука</button>
         </div>
       </div>
 
@@ -108,9 +109,37 @@
 
     <div class="pure-u-1"> <!-- BADGES -->
       <div class="badges-list">
+        <div class="badges-list__item">
+          <h3>
+            Кафедра кібербезпеки<br>
+            та інформаційних технологій
+          </h3>
+          <p>
+            61001, м. Харків, просп. Науки, 9А,<br>
+            ХНЕУ ім. С. Кузнеця, <br>
+            головний навчальний корпус, 3 поверх, ауд. 307.<br>
+            Тел. +38 (057) 702-18-31, 3-57 (внутрішній)<br>
+            E-mail: kafkb@hneu.edu.ua
+          </p>
+        </div>
         <img src="./images/badge1.png" alt="badge1" class="badges-list__item pure-img">
+        <img src="./images/badge2.jpg" alt="badge2" class="badges-list__item pure-img">
         <img src="./images/badge3.png" alt="badge2" class="badges-list__item pure-img">
-        <img src="./images/badge4.png" alt="badge4" class="badges-list__item pure-img">
+        <div class="badges-list__item">
+          <h3>
+            Телефон довіри
+          </h3>
+          <p>
+            соціально-психологічної<br>
+            служби ХНЕУ ім. С. Кузнеця:
+          </p>
+          <h3>
+            050-13-51-519
+          </h3>
+          <p>
+            email: soc_sluzba@hneu.edu.ua
+          </p>
+        </div>
       </div>
     </div>
 
@@ -118,6 +147,8 @@
       <div class="copyright-holder"> Copyright © All rights reserved. </div>
     </div>
   </div>
+
+  <div class="scrollup" onclick="topFunction()"><i class="fas fa-arrow-up"></i></div>
 
     <script src="./script.js" async defer></script>
 </body>

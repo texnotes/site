@@ -1,61 +1,46 @@
 var isMobileMenuOpened = false;
-var mobileMenu = document.querySelector('.menu-mobile');
-var mobileMenuButton = document.querySelector('.nav-menu__burger');
+var mobileMenu = document.querySelector(".menu-mobile");
+var mobileMenuButton = document.querySelector(".nav-menu__burger");
 
-mobileMenuButton.addEventListener('click', function() {
+mobileMenuButton.addEventListener("click", function() {
   isMobileMenuOpened = !isMobileMenuOpened;
   toggleElement(mobileMenu);
-})
-
-//
-var searchButton = document.querySelector('.nav-menu__search');
-var cancelSearchButton = document.querySelector('.nav-menu__search-cancel');
-var searchInput = document.querySelector('.nav-menu__search-input');
-var isSearchEnabled = false;
-
-var menuItems = document.querySelectorAll('.nav-menu__item');
-
-searchButton.addEventListener('click', function() {
-  // isSearchEnabled = !isSearchEnabled;
-  isSearchEnabled = true;
-
-  // console.log({isSearchEnabled});
-
-    show(cancelSearchButton);
-    show(searchInput);
-    hide(searchButton);
-
-    menuItems.forEach(function(e) {
-      // hide(e);
-      e.toggleAttribute('hidden');
-    });
-
-
-  // if (isSearchEnabled) {
-  //   console.log(searchInput);
-  // }
-
-  // if (isSearchEnabled) {
-    // to
-  // }
 });
 
-cancelSearchButton.addEventListener('click', function() {
+//
+var searchButton = document.querySelector(".nav-menu__search");
+var cancelSearchButton = document.querySelector(".nav-menu__search-cancel");
+var searchInput = document.querySelector(".nav-menu__search-input");
+var isSearchEnabled = false;
+
+var menuItems = document.querySelectorAll(".nav-menu__item");
+
+searchButton.addEventListener("click", function() {
+  isSearchEnabled = true;
+  show(cancelSearchButton);
+  show(searchInput);
+  hide(searchButton);
+
+  menuItems.forEach(function(e) {
+    e.toggleAttribute("hidden");
+  });
+});
+
+cancelSearchButton.addEventListener("click", function() {
   hide(cancelSearchButton);
   hide(searchInput);
   show(searchButton);
 
-    menuItems.forEach(function(e) {
-      // show(e);
-      e.toggleAttribute('hidden');
-    });
+  menuItems.forEach(function(e) {
+    // show(e);
+    e.toggleAttribute("hidden");
+  });
 });
-
 
 // HELPERS
 
-var toggleElement = function (elem) {
-  if (window.getComputedStyle(elem).display === 'block') {
+var toggleElement = function(elem) {
+  if (window.getComputedStyle(elem).display === "block") {
     hide(elem);
     return;
   }
@@ -63,10 +48,47 @@ var toggleElement = function (elem) {
   show(elem);
 };
 
-var show = function (elem) {
-  elem.style.display = 'block';
+var show = function(elem) {
+  elem.style.display = "block";
 };
 
-var hide = function (elem) {
-  elem.style.display = 'none';
+var hide = function(elem) {
+  elem.style.display = "none";
 };
+
+window.onscroll = function() {
+  scrollFunction();
+};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    document.querySelector(".scrollup").style.display = "flex";
+  } else {
+    document.querySelector(".scrollup").style.display = "none";
+  }
+}
+
+function topFunction() {
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}
+
+if (!Element.prototype.toggleAttribute) {
+  Element.prototype.toggleAttribute = function(name, force) {
+    var forcePassed = arguments.length === 2;
+    var forceOn = !!force;
+    var forceOff = forcePassed && !force;
+    
+    if (this.getAttribute(name) !== null) {
+      if (forceOn) return true;
+      
+      this.removeAttribute(name);
+      return false;
+    } else {
+      if (forceOff) return false;
+      
+      this.setAttribute(name, "");
+      return true;
+    }
+  };
+}
