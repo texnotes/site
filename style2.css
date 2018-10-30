@@ -17,6 +17,10 @@ html {
   font-family: 'Roboto', sans-serif;
 }
 
+input::-ms-clear {
+  display: none;
+}
+
 .pure-g > div {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -212,6 +216,8 @@ html {
 
   margin: 80px auto 0 auto;
 
+  text-decoration: none;
+
   border: solid 2px transparent;
   border-radius: 30px;
 
@@ -219,6 +225,9 @@ html {
   background-clip: content-box, border-box;
   background-image:linear-gradient(to right, #3554bb 0%, #82e5fe 100%);
   color: white;
+
+  outline: none !important;
+  outline-style:none !important;
 }
 
 /*** INFO ***/
@@ -278,6 +287,11 @@ html {
   background-clip: content-box, border-box;
   background-image:linear-gradient(to right, #3554bb 0%, #82e5fe 100%);
   color: white;
+
+  outline: none !important;
+  outline-style:none !important;
+  
+  text-decoration: none;
 }
 
 /*** BADGES ***/
@@ -357,6 +371,15 @@ html {
   margin: 0 auto;
 }
 
+.menu__item {
+  border: none;
+}
+
+.menu__item > a {
+  color: inherit;
+  text-decoration: none;
+}
+
 @media screen and (max-width: 641px) {
   .menu-holder {
     position: initial;
@@ -432,6 +455,9 @@ html {
   border: none;
   border-bottom: 2px solid #1e87f0;
   color: white;
+
+  outline: none;
+  outline-style: none;
 }
 
 .nav-menu__search-input {
