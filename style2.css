@@ -25,6 +25,8 @@ input::-ms-clear {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+
+  letter-spacing: 0em;
 }
 /*******************************************************************************/
 
@@ -352,22 +354,14 @@ input::-ms-clear {
   right: 0;
 
   width: 100%;
-
-  /* background: red; */
 }
 
 .menu {
-  /* position: absolute; */
-  /* top: 465px; */
-  /* right: 0; */
-
   display: flex;
 
   justify-content: flex-end;
 
   max-width: 1200px;
-  /* background: blue; */
-
   margin: 0 auto;
 }
 
@@ -496,4 +490,93 @@ input::-ms-clear {
 .scrollup:hover {
   color:#fff;
   background-image: linear-gradient(to right, #3554bb 0%, #82e5fe 100%);
+}
+
+/*** MAIN CONTENT ***/
+.main-content-holder {
+  margin-top: 80px;
+
+  display: flex;
+  justify-content: center;
+}
+
+
+@media screen and (max-width: 1279px) {
+  .right-sidebar {
+    margin: 20px !important;
+  }
+}
+
+.right-sidebar {
+  background: red;
+
+  margin-top: 80px;
+}
+
+.lecturers-holder {
+  display: flex;
+  margin: 0 20px;
+
+  flex-wrap: wrap;
+
+  align-items: baseline;
+  justify-content: space-between;
+
+}
+
+.lecturer-card {
+  box-sizing: border-box;
+
+  /* max-width: 500px; */
+  /* min-width: 200px; */
+  width: 100%;
+
+  background: #fafafa;
+
+  padding: 20px;
+  margin: 0 0 20px 0;
+
+  box-shadow: 0 8px 21px rgba(26, 26, 26, 0.09);
+
+  display: flex;
+  flex-direction: column;
+}
+
+.lecturer-card__name {
+  font-size: 2rem;
+}
+
+
+.lecturer-card__avatar {
+  display: flex;
+  /* justify-content: center; */
+}
+
+.lecturer-card__avatar > img {
+  height: 200px;
+}
+
+.lecturer-card__title {
+  font-weight: bold;
+  margin: 20px 0 0 0;
+}
+
+.lecturer-card__button {
+  width: 300px;
+  height: 60px;
+
+  margin: 20px auto 0 auto;
+
+  border: solid 2px transparent;
+  border-radius: 30px;
+
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  background-image:linear-gradient(to right, #3554bb 0%, #82e5fe 100%);
+  color: white;
+
+  outline: none !important;
+  outline-style:none !important;
+  
+  text-decoration: none;
 }
