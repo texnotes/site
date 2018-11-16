@@ -79,7 +79,9 @@
           науковий ступінь кандидата технічних наук; 2 – звання професора, 8 – звання
           доцента.
         </div>
-        <button class="summary-card__button" data-balloon="Більше інформації" data-balloon-pos="up">Читати далі</button>
+        <div class="fix-ie--button-wrap"> <!-- TODO: Temp solution -->
+          <button class="summary-card__button" data-balloon="Більше інформації" data-balloon-pos="up">Читати далі</button>
+        </div>
      </div>
 
       </div>
@@ -122,9 +124,18 @@
             E-mail: kafkb@hneu.edu.ua
           </p>
         </div>
-        <img src="./images/badge1.png" alt="badge1" class="badges-list__item pure-img">
-        <img src="./images/badge2.jpg" alt="badge2" class="badges-list__item pure-img">
-        <img src="./images/badge3.png" alt="badge2" class="badges-list__item pure-img">
+        <div class="badges-list__item">
+          <img src="./images/badge1.png" alt="badge1" class="pure-img">
+        </div>
+        <div class="badges-list__item">
+          <img src="./images/badge2.jpg" alt="badge1" class="pure-img">
+        </div>
+        <div class="badges-list__item">
+          <img src="./images/badge3.png" alt="badge1" class="pure-img">
+        </div>
+        <!-- <img src="./images/badge1.png" alt="badge1" class="badges-list__item pure-img"> -->
+        <!-- <img src="./images/badge2.jpg" alt="badge2" class="badges-list__item pure-img"> -->
+        <!-- <img src="./images/badge3.png" alt="badge2" class="badges-list__item pure-img"> -->
         <div class="badges-list__item">
           <h3>
             Телефон довіри

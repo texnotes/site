@@ -190,8 +190,8 @@ input::-ms-clear {
 
   box-shadow: 0 8px 21px rgba(26, 26, 26, 0.09);
 
-  display: flex;
-  flex-direction: column;
+  /* display: flex; */
+  /* flex-direction: column; */
 }
 
 .summary-card__image {
@@ -212,11 +212,19 @@ input::-ms-clear {
   font-size: 19px;
 }
 
+.fix-ie--button-wrap {
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+}
 .summary-card__button {
   width: 300px;
   height: 60px;
 
-  margin: 80px auto 0 auto;
+  margin-top: 40px;
+
+  /* margin: 40px auto 0 auto; */
 
   text-decoration: none;
 
@@ -255,7 +263,7 @@ input::-ms-clear {
   max-width: 560px;
   min-width: 300px;
 
-  height: 440px;
+  /* height: 440px; */
 
   flex-grow: 1;
   flex-shrink: 1;
@@ -280,7 +288,7 @@ input::-ms-clear {
   width: 300px;
   height: 60px;
 
-  margin: auto auto 0 auto;
+  margin: 40px auto 0 auto;
 
   border: solid 2px transparent;
   border-radius: 30px;
@@ -309,22 +317,40 @@ input::-ms-clear {
 }
 
 .badges-list__item {
-  /* margin-left: 36px; */
   margin-top: 10px;
   margin-bottom: 10px;
+  margin-left: 20px;
 
   color: white;
   width: auto;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* align-items: center; */
 }
 
-.badges-list__item.pure-img {
-  margin: auto 20px;
-}
 .badges-list__item > h3 {
   font-size: 20px;
+  margin: 0;
+  margin-bottom: 10px;
 }
 .badges-list__item > p {
   font-size: 12px;
+  margin: 0;
+}
+
+.badges-list__item > .pure-img {
+  /* width: 100%; */
+  /* height: auto; */
+  /* max-width: 140px; */
+  /* min-height: 140px; */
+  /* width: 100%; */
+  /* height: auto; */
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .badges-list__item:first-child {
@@ -337,12 +363,17 @@ input::-ms-clear {
   }
 
   .badges-list__item.pure-img {
-    display: none;  
+    /* display: none;   */
   }
 
   .badges-list__item {
-    width: 274px;
-    margin-right: 60px;
+    /* width: 274px; */
+    margin-right: 20px;
+  }
+
+  .badges-list__item > .pure-img {
+    height: 140px;
+    width: 140px;
   }
 }
 

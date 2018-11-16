@@ -14,6 +14,7 @@ var searchInput = document.querySelector(".nav-menu__search-input");
 var isSearchEnabled = false;
 
 var menuItems = document.querySelectorAll(".nav-menu__item");
+menuItems = [].slice.call(menuItems); // IE FIX
 
 searchButton.addEventListener("click", function() {
   isSearchEnabled = true;
