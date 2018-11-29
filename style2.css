@@ -327,7 +327,6 @@ input::-ms-clear {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /* align-items: center; */
 }
 
 .badges-list__item > h3 {
@@ -341,13 +340,6 @@ input::-ms-clear {
 }
 
 .badges-list__item > .pure-img {
-  /* width: 100%; */
-  /* height: auto; */
-  /* max-width: 140px; */
-  /* min-height: 140px; */
-  /* width: 100%; */
-  /* height: auto; */
-
   display: flex;
   justify-content: center;
   align-items: center;
@@ -524,77 +516,63 @@ input::-ms-clear {
 }
 
 /*** MAIN CONTENT ***/
-.main-content-holder {
+.main-wrapper {
   margin-top: 80px;
 
-  display: flex;
-  justify-content: center;
+  max-width: 1200px;
+  width: 1200px;
+  
+  margin: 80px auto 0 auto;
 }
 
+.right-content {
+  box-sizing: border-box;
+  /* max-width: 400px; */
 
-@media screen and (max-width: 1279px) {
-  .right-sidebar {
-    margin: 20px !important;
-  }
-}
+  margin: 0 20px;
 
-.right-sidebar {
   background: red;
+}
 
-  margin-top: 80px;
+.main-content {
+  width: 100%;
 }
 
 .lecturers-holder {
   display: flex;
-  margin: 0 20px;
-
   flex-wrap: wrap;
+  justify-content: space-around;
 
-  align-items: baseline;
-  justify-content: space-between;
-
+  margin: 0 20px;
 }
 
 .lecturer-card {
   box-sizing: border-box;
 
-  /* max-width: 500px; */
-  /* min-width: 200px; */
-  width: 100%;
-
-  background: #fafafa;
+  max-width: 30%;
 
   padding: 20px;
-  margin: 0 0 20px 0;
+  margin: 0 0px 20px 0px;
 
   box-shadow: 0 8px 21px rgba(26, 26, 26, 0.09);
-
-  display: flex;
-  flex-direction: column;
 }
 
 .lecturer-card__name {
-  font-size: 2rem;
-}
-
-
-.lecturer-card__avatar {
-  display: flex;
-  /* justify-content: center; */
+  font-size: 24px;
 }
 
 .lecturer-card__avatar > img {
-  height: 200px;
+  width: 100%;
+  height: auto;
 }
 
-.lecturer-card__title {
-  font-weight: bold;
-  margin: 20px 0 0 0;
+.lecturer-card__text {
+  margin-top: 20px;
 }
 
 .lecturer-card__button {
-  width: 300px;
-  height: 60px;
+  width: 49%;
+  height: 50px;
 
   margin: 20px auto 0 auto;
 
@@ -610,4 +588,37 @@ input::-ms-clear {
   outline-style:none !important;
   
   text-decoration: none;
+
+  bottom: 0px;
+}
+
+@media screen and (max-width: 1166px) {
+  .lecturer-card {
+    max-width: 50%;
+  }
+}
+
+@media screen and (max-width: 641px) {
+  .lecturer-card {
+
+    max-width: 100%;
+  }
+
+  .main-wrapper {
+    margin-top: 0px;
+  }
+}
+
+
+.fix-small-image {
+  height: 31px;
+  justify-self: center;
+  align-self: center;
+}
+
+
+@media screen and (max-width: 1090px) {
+  .hide_useless_image {
+    display: none;
+  }
 }
