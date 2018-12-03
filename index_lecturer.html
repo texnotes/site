@@ -5,12 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Кафедра кібербезпеки та інформаційних технологій</title>
+      <script src="./js/jquery-3.3.1.min.js" async defer></script>
+
   <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
   <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/grids-responsive-min.css">
   <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/balloon-css/0.5.0/balloon.min.css">
-  <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="css/hover-min.css">
+  <link rel="stylesheet" href="css/style2.css">
   <meta name="theme-color" content="#1c1c1c"/>
 </head>
 <body>
@@ -54,9 +57,9 @@
 
     <div class="menu-holder">
       <div class="menu">
-        <button class="menu__item">Новини</button>
-        <button class="menu__item">Викладачі</button>
-        <button class="menu__item">Про кафедру</button>
+        <button class="menu__item hvr-wobble-horizontal">Новини</button>
+        <button class="menu__item hvr-wobble-horizontal">Викладачі</button>
+        <button class="menu__item hvr-wobble-horizontal">Про кафедру</button>
       </div>
     </div>
 
@@ -65,7 +68,7 @@
         <div class="lecturers-holder">
 
             <div class="lecturer-card">
-                <div class="lecturer-card__avatar"><img src="./images/1.jpg" alt="evseev"></div>
+                <div class="lecturer-card__avatar"><img src="./images/2.jpg" alt="evseev"></div>
                 <div class="lecturer-card__name">Євсеєв Сергій Петрович</div>
 
                 <div class="lecturer-card__text">Кандидат економічних наук, доцент</div>
@@ -74,7 +77,7 @@
             </div>
 
             <div class="lecturer-card">
-                <div class="lecturer-card__avatar"><img src="./images/2.jpg" alt="evseev"></div>
+                <div class="lecturer-card__avatar"><img src="./images/1.jpg" alt="evseev"></div>
                 <div class="lecturer-card__name">Коц Григорій Павлович</div>
 
                 <div class="lecturer-card__text">Доктор технічних наук, старший науковий співробітник</div>
@@ -141,13 +144,14 @@
             61001, м. Харків, просп. Науки, 9А,<br>
             ХНЕУ ім. С. Кузнеця, <br>
             головний навчальний корпус, 3 поверх, ауд. 307.<br>
-            Тел. +38 (057) 702-18-31, 3-57 (внутрішній)<br>
-            E-mail: kafkb@hneu.edu.ua
+              Тел. <a href="tel:+380577021831" data-balloon-pos="up" data-balloon="Детальніша інформація для студента">+38 (057) 702-18-31</a>, <a href="tel:+357" data-balloon-pos="up" data-balloon="Детальніша інформація для студента">3-57</a> (внутрішній)<br>
+            E-mail:             <a href="mailto:soc_sluzba@hneu.edu.ua" data-balloon-pos="up" data-balloon="Детальніша інформація для студента">email: kafkb@hneu.edu.ua</a>
+
           </p>
         </div>
-        <img src="./images/badge1.png" alt="badge1" class="badges-list__item pure-img hide_useless_image">
-        <img src="./images/badge2.jpg" alt="badge2" class="badges-list__item pure-img fix-small-image hide_useless_image">
-        <img src="./images/badge3.png" alt="badge2" class="badges-list__item pure-img hide_useless_image">
+        <a href="#" data-balloon-pos="up" data-balloon="Детальніша інформація для студента"><img src="./images/badge1.png" alt="badge1" class="badges-list__item pure-img hide_useless_image"></a>
+        <a href="#" data-balloon-pos="up" data-balloon="Детальніша інформація для студента"><img src="./images/badge2.jpg" alt="badge2" class="badges-list__item pure-img fix-small-image hide_useless_image"></a>
+        <a href="#" data-balloon-pos="up" data-balloon="Детальніша інформація для студента"><img src="./images/badge3.png" alt="badge2" class="badges-list__item pure-img hide_useless_image"></a>
         <div class="badges-list__item">
           <h3>
             Телефон довіри
@@ -157,10 +161,10 @@
             служби ХНЕУ ім. С. Кузнеця:
           </p>
           <h3>
-            050-13-51-519
+            <a href="tel:+0501351519" data-balloon-pos="up" data-balloon="Детальніша інформація для студента">050-13-51-519</a>
           </h3>
           <p>
-            email: soc_sluzba@hneu.edu.ua
+            <a href="mailto:soc_sluzba@hneu.edu.ua" data-balloon-pos="up" data-balloon="Детальніша інформація для студента">email: soc_sluzba@hneu.edu.ua</a>
           </p>
         </div>
       </div>
@@ -173,6 +177,7 @@
 
   <div class="scrollup" onclick="topFunction()"><i class="fas fa-arrow-up"></i></div>
 
-    <script src="./script.js" async defer></script>
+        <script src="./js/common.js" async defer></script>
+
 </body>
 </html>
