@@ -28,6 +28,9 @@ input::-ms-clear {
 
   letter-spacing: 0em;
 }
+a{
+    color: white;
+}
 /*******************************************************************************/
 
 /*******************************************************************************/
@@ -121,7 +124,7 @@ input::-ms-clear {
 .headline {
   min-height: 425px;
 
-  background-image: url("./images/header-bg.jpg");
+  background-image: url("../images/header-bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -429,18 +432,22 @@ input::-ms-clear {
 
 
 .menu__item {
+    z-index: 4;
   width: 168px;
   height: 85px;
-
   display: flex;
   justify-content: center;
   align-items: center;
   
   margin-right: 28px;
-
+  -webkit-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    transition: all .3s ease;
   background: white;
   box-shadow: 0 25px 36px 4px rgba(37, 53, 173, 0.1);
 }
+
 
 .menu__item:last-child {
   margin-right: 32px;
@@ -464,6 +471,7 @@ input::-ms-clear {
   width: 100%;
   margin-left: 32px;
   margin-right: 16px;
+    margin-top: 21px;
 }
 
 .nav-menu__search-input > input {
