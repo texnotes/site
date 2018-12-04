@@ -83,7 +83,7 @@ a{
   }
 }
 
-.nav-menu__item {
+.nav-menu a {
   color: white;
 
   margin-left: 20px;
@@ -91,15 +91,38 @@ a{
 
   font-size: 15px;
   font-weight: 100;
-
   text-align: center;
-
+    text-decoration: none;
   cursor: pointer;
 }
 
-.nav-menu__item:hover {
-  border-bottom: 2px solid #1e87f0;
+.nav-menu a:hover {
+    text-decoration: none;
+        top: 27px;
+
 }
+
+.nav-menu a:after {
+    display: block;
+    position: relative;
+    content: "";
+    height: 2px;
+    width: 0%;
+    background-image: linear-gradient(to right, #3554bb 0%, #82e5fe 100%);
+    transition: width .3s ease-in-out;
+    bottom: 0px;
+    top: 27px;
+
+}
+.nav-menu a:hover:after,
+.nav-menu a:focus:after {
+    top: 27px;
+    width: 100%;
+}
+
+
+
+
 
 .nav-menu__search {
   color: white;
