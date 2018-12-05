@@ -95,7 +95,17 @@ if (!Element.prototype.toggleAttribute) {
     }
   };
 }
+    
+(function($) {
+$(function() {
 
+  $(document).on("click",".scrollup", function(){
+    $('html, body').animate({scrollTop: 0},500);
+    return false;
+  })
+
+})
+})(jQuery);
 
 });
 
