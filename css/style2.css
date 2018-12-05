@@ -4,7 +4,8 @@
 html, body {
   height: 100%;
   width: 100%;
-
+  margin: 0px;
+  padding: 0px;
 
 }
 
@@ -22,6 +23,7 @@ input::-ms-clear {
 }
 
 .pure-g > div {
+  width: 100%:
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -95,11 +97,18 @@ a{
     text-decoration: none;
   cursor: pointer;
 }
-
+.hneu{
+    height: 151px;
+    width: 151px;
+    background-size: cover;
+}
 .nav-menu a:hover {
     text-decoration: none;
         top: 27px;
 
+}
+.pure-u-1{
+    width: 100%;
 }
 
 .nav-menu a:after {
@@ -192,7 +201,7 @@ a{
   display: flex;
   justify-content: center;
   align-items: center;
-
+  text-align: center;
   background: #1c1c1c;
   color: #fff;
 
@@ -332,11 +341,10 @@ a{
 
 /*** BADGES ***/
 .badges-list {
-  /* padding: 0 60px; */
-
-  padding: 50px 30px;
+  /* padding: 0 60px; */ 
+    width: 100%;
+/*    padding: 50px 30px;*/
   background: #100a4d;
-
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -346,13 +354,14 @@ a{
   margin-top: 10px;
   margin-bottom: 10px;
   margin-left: 20px;
-
+  padding: 10px;
   color: white;
   width: auto;
 
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
 
 .badges-list__item > h3 {
@@ -451,6 +460,7 @@ a{
   .summary-card-holder {
     margin-top: 20px;
   }
+
 }
 
 
@@ -539,6 +549,7 @@ a{
   width: 30px;
   box-shadow: 0px 0px 6px #fff;
   border-radius: 5px;
+ 
 }
 
 .scrollup:hover {
@@ -573,13 +584,18 @@ a{
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-
+  flex-wrap: wrap;
   margin: 0 20px;
 }
-
+.lecturer-card img{
+    background-size: cover;
+    width: auto;
+    max-width: 100%;
+}
 .lecturer-card {
-  box-sizing: border-box;
 
+  box-sizing: border-box;
+  width: auto;
   max-width: 30%;
 
   padding: 20px;
@@ -627,6 +643,19 @@ a{
   .lecturer-card {
     max-width: 50%;
   }
+        .badges-list__item{
+        width: 100%;
+    }
+    .pure-u-1{
+        width: 100%:
+    }
+    .badges-list{
+    width: 100%;
+    }
+    .copyright-holder{
+        width: 100%;
+    }
+    
 }
 
 @media screen and (max-width: 641px) {
@@ -638,6 +667,9 @@ a{
   .main-wrapper {
     margin-top: 0px;
   }
+        .badges-list__item{
+        
+    }
 }
 
 
@@ -646,6 +678,7 @@ a{
   justify-self: center;
   align-self: center;
 }
+
 
 
 @media screen and (max-width: 1090px) {
