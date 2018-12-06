@@ -59,22 +59,7 @@ var hide = function(elem) {
   elem.style.display = "none";
 };
 
-window.onscroll = function() {
-  scrollFunction();
-};
 
-function scrollFunction() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    document.querySelector(".scrollup").style.display = "flex";
-  } else {
-    document.querySelector(".scrollup").style.display = "none";
-  }
-}
-
-function topFunction() {
-  document.body.scrollTop = 0; // For Safari
-  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-}
 
 if (!Element.prototype.toggleAttribute) {
   Element.prototype.toggleAttribute = function(name, force) {
@@ -96,16 +81,19 @@ if (!Element.prototype.toggleAttribute) {
   };
 }
     
-(function($) {
-$(function() {
-
-  $(document).on("click",".scrollup", function(){
-    $('html, body').animate({scrollTop: 0},500);
-    return false;
-  })
-
-})
-})(jQuery);
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 0) {
+            $('.scrolalup').fadeIn();
+        } else {
+            $('.scrolalup').fadeOut();
+        }
+    });
+    $('.scrolalup').click(function () {
+        $('body,html').animate({
+            scrollTop: 0
+        }, 700);
+        return false;
+    });
 
 });
 
