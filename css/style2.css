@@ -13,6 +13,7 @@ html {
   overflow-x: hidden;
 }
 
+
 * {
   letter-spacing: initial;
   font-family: 'Roboto', sans-serif;
@@ -68,7 +69,6 @@ a{
 
 .nav-menu__burger {
   color: white;
-
   display: none;
 }
 @media screen and (max-width: 767px) {
@@ -130,8 +130,32 @@ a{
 }
 
 
+.scrolalup{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    transition: .3s;
+    width: 44px;
+    height: 46px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    cursor: pointer;
+    background: #0a054c;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -o-border-radius: 3px;
+    -moz-border-radius: 3px;
+    
 
-
+}
+.scrolalup:hover, .scrolalup:focus{
+    transition: 500ms;
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    background-image: linear-gradient(to right, #3554bb 0%, #82e5fe 100%);
+}
 
 .nav-menu__search {
   color: white;
@@ -194,6 +218,15 @@ a{
 
 /*******************************************************************************/
 /*** NAV ***/
+[data-balloon][data-balloon-pos="up"]:after{
+    text-decoration: none;
+}
+[data-balloon][data-balloon-pos="up"] a:after{
+    text-decoration: none;
+}
+[data-balloon]{
+    text-decoration: none;
+}
 
 .copyright-holder {
   height: 56px;
